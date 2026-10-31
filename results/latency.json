@@ -1,0 +1,43 @@
+{
+  "benchmark_timestamp": "2026-10-31 10:22:45",
+  "hardware": {
+    "os": "Windows 11 (10.0.26200)",
+    "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "python_version": "3.12.8",
+    "pytorch_version": "2.14.1+cu130",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "gpu_vram_total_gb": 6.0,
+    "cuda_version": "13.0"
+  },
+  "dataset": "Google FLEURS Hindi (hi_in) Test Split",
+  "num_clips": 30,
+  "total_audio_seconds": 363.84,
+  "speedup_factor_faster_whisper_vs_hf": 1.97,
+  "engines": {
+    "huggingface_transformers": {
+      "engine": "HuggingFace Transformers (PyTorch fp16)",
+      "num_clips": 30,
+      "total_audio_sec": 363.84,
+      "total_latency_sec": 56.765,
+      "real_time_factor": 0.156,
+      "throughput_audio_sec_per_sec": 6.41,
+      "avg_latency_per_clip_sec": 1.892,
+      "median_latency_per_clip_sec": 1.733,
+      "p95_latency_per_clip_sec": 3.065,
+      "peak_vram_gb": 0.56
+    },
+    "faster_whisper_ctranslate2": {
+      "engine": "faster-whisper (CTranslate2 float16)",
+      "num_clips": 30,
+      "total_audio_sec": 363.84,
+      "total_latency_sec": 28.753,
+      "real_time_factor": 0.079,
+      "throughput_audio_sec_per_sec": 12.65,
+      "avg_latency_per_clip_sec": 0.958,
+      "median_latency_per_clip_sec": 0.719,
+      "p95_latency_per_clip_sec": 1.67,
+      "peak_vram_gb": 0.01
+    }
+  }
+}

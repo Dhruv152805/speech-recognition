@@ -1,0 +1,34 @@
+# Python virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Heavy Model Checkpoints & Optimizer States (> 100MB exceeds GitHub push limits)
+checkpoints/
+models/whisper-small-hindi/model.safetensors
+models/whisper-small-hindi-ct2/model.bin
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs & Temporary files
+*.log
+*.tmp
