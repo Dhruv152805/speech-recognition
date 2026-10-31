@@ -303,21 +303,6 @@ ct2-transformers-converter --model models/whisper-small-hindi --output_dir model
 python src/benchmark_latency.py --num_samples 30 --output results/latency.json
 ```
 
----
-
-## ⚠️ Limitations & Future Roadmap
-
-### Current Limitations
-1. **Studio Read Speech vs. Hinglish**: FLEURS consists of formal studio speech. Conversational Hindi with English code-switching ("Hinglish") presents additional acoustic and lexical challenges requiring conversational datasets (e.g. Common Voice).
-2. **30-Second Attention Window**: Whisper processes speech in 30-second chunks; continuous speech streams require sliding-window chunking or Voice Activity Detection (VAD).
-
-### Future Roadmap
-1. **Parameter-Efficient Fine-Tuning (PEFT / LoRA)**: Inject low-rank adapters (`lora_r=16`, `lora_alpha=32`) into attention projections to enable fine-tuning under 2.5 GB VRAM with lightweight adapter checkpoints (< 30 MB).
-2. **Cross-Lingual Transfer to Dravidian Languages**: Leverage shared Indic phonetic inventory to transfer fine-tuned acoustic representations to low-resource languages like Kannada (`kn_in`) and Telugu (`te_in`).
-3. **Sub-500ms Streaming ASR with Silero VAD**: Integrate Silero Voice Activity Detection and WebSockets for real-time live captions.
-
----
-
 ## 📁 Repository Structure
 
 ```text
